@@ -75,6 +75,12 @@ class MyPortfolio:
         TODO: Complete Task 4 Below
         """
 
+        for i in range(1, len(self.price)):
+            R_n = self.returns.copy()[assets].iloc[i]
+            solution = [0]*11
+            solution[np.argmax(R_n)] = 1
+            self.portfolio_weights.loc[self.price.index[i], assets] = solution
+ 
         """
         TODO: Complete Task 4 Above
         """
